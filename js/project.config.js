@@ -8,33 +8,45 @@ export const PROJECT = {
   },
 
   api: {
-    baseUrl: "https://your-domain.com",
+    baseUrl: "https://sudancivicmap.com",
     dataEndpoint: "/data"
+  },
+
+  /**
+   * IMPORTANT:
+   * backendKey = key as returned by the server
+   * datasetKey = internal name used by the map
+   */
+  datasetMapping: {
+    hospitals: "Hospitals",
+    emergency_rooms: "BaseERR"
   },
 
   datasets: {
     hospitals: {
       geometry: "point",
-      latlngField: "gps",
+      latlngField: "GPS_Location",
 
-      popup: (d) => `
+      popup: d => `
         <strong>${d.name}</strong><br/>
-        Status: ${d.status ?? "unknown"}
+        Status: ${d.Status}<br/>
+        District: ${d.District}
       `
     },
 
     emergency_rooms: {
       geometry: "circle",
-      latlngField: "gps",
+      latlngField: "geolocation",
 
       circle: {
-        radius: d => Math.min((d.population ?? 500) * 2, 3000),
+        radius: d =>
+          Math.min((Number(d.ServedPopulation) || 500) * 2, 3000),
         color: "wheat"
       },
 
-      popup: (d) => `
-        <strong>${d.name}</strong><br/>
-        Population: ${d.population}
+      popup: d => `
+        <strong>${d.baseerr}</strong><br/>
+        Population: ${d.ServedPopulation}
       `
     }
   }

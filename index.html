@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Civic Mapping — Starter Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+
+  <!-- Default styles -->
+  <link rel="stylesheet" href="style/base.css" />
+  <link rel="stylesheet" href="style/theme.css" />
+  <link rel="stylesheet" href="style/civic-map.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 id="project-title">Civic Mapping</h1>
+    <p class="subtitle">
+      Data-driven map powered by Google Sheets
+    </p>
+  </header>
+
+  <!-- Main layout -->
+  <div class="layout">
+
+    <!-- Sidebar / data panel -->
+    <aside class="sidebar">
+      <h2>Data overview</h2>
+
+      <!-- Meta info -->
+      <div id="meta" class="meta">
+        <p><strong>Status:</strong> loading…</p>
+      </div>
+
+      <!-- Dataset list -->
+      <div id="dataset-list" class="dataset-list">
+        <!-- JS will populate this -->
+      </div>
+    </aside>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>Open-source civic mapping infrastructure</span>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- App bootstrap -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

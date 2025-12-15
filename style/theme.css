@@ -1,0 +1,18 @@
+/* 
+  Theme file (optional)
+  Users can replace or delete this file.
+*/
+
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.header,
+.footer {
+  background: rgba(10, 10, 10, 0.9);
+}
+
+a {
+  color: #f5f5f5;
+}
