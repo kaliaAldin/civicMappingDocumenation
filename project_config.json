@@ -1,0 +1,30 @@
+{
+  "project_name": "Sudan Civic Map",
+  "sheet_id": "16KMfaaFco92BFtoiUEzbbBy0OMSFVNPbj3sDPrSHgpg",
+  "datasets": {
+    "hospitals": {
+      "range": "Hospitals!A2:L",
+      "fields": {
+        "name": 0,
+        "district": 1,
+        "status": 2,
+        "gps": 5,
+        "controlled_by": 6
+      }
+    },
+    "emergency_rooms": {
+      "range": "BaseERR!A2:U",
+      "fields": {
+        "name": 1,
+        "district": 2,
+        "rooms": 4,
+        "kitchens": 8,
+        "population": 15,
+        "gps": 16,
+        "controlled_by": 17,
+        "description": 19,
+        "photo": 20
+      }
+    }
+  }
+}
